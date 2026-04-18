@@ -1,6 +1,6 @@
 //Task 1: Variable Update
 var a = 50;
-a = 100;  //var can be redeclare 
+a = 100;  //var can be reinitialize
 console.log("Number:", a); //so the output will be 100
 
 //Task 2: Let Variable Math
