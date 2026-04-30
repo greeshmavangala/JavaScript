@@ -108,7 +108,7 @@
     //Task 12: Custom Sort (Descending)
     let a = [5,2,9,1];
     a.sort((a,b) => {
-        b - a
+         return b - a
     });
     console.log(a);
 
