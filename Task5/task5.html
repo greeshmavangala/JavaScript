@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shoply</title>
+  <link rel="stylesheet" href="./task5.css">
+</head>
+<body>
+
+<div class="navbar">
+  <h2> Shoply</h2>
+  <div class="search-box">
+    <input type="text" id="search" placeholder="Search Products...." >
+  </div>
+
+  <div class="filters">
+  <div class="dropdown">
+    <button class="dropbtn">Category ▼</button>
+
+    <div class="dropdown-content scroll-box">
+      <div onclick="filterCategory('all')">All Categories</div>
+
+      <div onclick="filterCategory('men\'s clothing')">Men</div>
+
+      <div onclick="filterCategory('women\'s clothing')">Women</div>
+
+      <div onclick="filterCategory('jewelery')">Jewelry</div>
+
+      <div onclick="filterCategory('electronics')">Electronics</div>
+    </div>
+  </div>
+
+  <div class="dropdown">
+    <button class="dropbtn">Sort ▼</button>
+
+    <div class="dropdown-content">
+      <div onclick="sortProducts('low')">Price Low - High</div>
+      <div onclick="sortProducts('high')">Price High - Low</div>
+    </div>
+  </div>
+
+</div>
+
+  <div class="cart">
+    🛒 <span id="cart-count">0</span>
+  </div>
+
+</div>
+  <p id="loading">Loading products...</p>
+  <p id="error"></p>
+  <div id="products" class="grid"></div>
+
+<div id="productModal" class="modal" onclick="outsideClick(event)">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal()">×</span>
+
+    <div class="modal-body">
+      <img id="modalImg" />
+
+      <div class="modal-info">
+        <h2 id="modalTitle"></h2>
+        <p id="modalDesc"></p>
+        <h3 id="modalPrice"></h3>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="./task5.js"></script>
+</body>
+</html>
